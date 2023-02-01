@@ -8,8 +8,7 @@ const App =  () => {
     <div className="uk-container">
         <Navbar></Navbar>
         <TodoList></TodoList>
-        <h1>React</h1>
-        
+       
     </div>
     );    
 }

@@ -4,23 +4,24 @@ import TodoListItem from './TodoListItem';
 
 const TodoList = () => {
     const todos:  Todo[] = [
-        { id:1, title: 'market', done:false },
-        { id:2, title: 'gym', done:true }
+        { id:1, title: 'Go to Market', done:true },
+        { id:2, title: 'Go to Gym', done:false },
+        { id:3, title: 'Go to Dentist', done:false }
     ];
     return(
     <table className="uk-table">
-        <caption>Lista de tarefas</caption>
+        <caption>Tasks ToDo</caption>
         <thead>
             <tr>
                 <th>#</th>
-                <th>Tarefa</th>
+                <th>Tasks</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
         {
             todos?.map(
-                todo => (<TodoListItem key={todo.id}></TodoListItem>)
+                todo => (<TodoListItem key={todo.id} todo={todo}></TodoListItem>)
             )
         }
         </tbody>
